@@ -1,5 +1,5 @@
 {
-    "name": "FahadYousafMahar/EasyPaisaWSDL",
+    "name": "fahadyousafmahar/easypaisa-wsdl-php",
     "type": "library",
     "keywords": ["fahadyousafmahar","easypaisawsdl","easypaisa","easypaisa-php","easypay","telenor"],
     "description": "PHP library to facilitate use of Easypaisa's Easypay WSDL\n",
