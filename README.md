@@ -1,5 +1,5 @@
 # EasyPaisaWSDL
-PHP library to facilitate use of Easypaisa's Easypay WSDL
+PHP library to facilitate use of Easypaisa's B2B WSDL Integration
 
 [![PHP Version](https://img.shields.io/packagist/php-v/fahadyousafmahar/easypaisa-wsdl-php)](https://packagist.org/packages/fahadyousafmahar/easypaisa-wsdl-php)
 ![GitHub top language](https://img.shields.io/github/languages/top/fahadyousafmahar/easypaisawsdl)
