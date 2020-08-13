@@ -1,10 +1,10 @@
 # EasyPaisaWSDL
 PHP library to facilitate use of Easypaisa's Easypay WSDL
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/nesbot/carbon.svg?style=flat-square)](https://packagist.org/packages/nesbot/carbon)
-![Contributors](https://img.shields.io/github/contributors/fahadyousafmahar/EasyPaisaWSDL.svg)
-![License](https://img.shields.io/github/license/fahadyousafmahar/EasyPaisaWSDL.svg)
-![Repo Size](https://img.shields.io/github/repo-size/fahadyousafmahar/EasyPaisaWSDL.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/fahadyousafmahar/easypaisawsdl)
+![Contributors](https://img.shields.io/github/contributors/fahadyousafmahar/easypaisawsdl)
+![License](https://img.shields.io/github/license/fahadyousafmahar/easypaisawsdl)
+![Repo Size](https://img.shields.io/github/repo-size/fahadyousafmahar/easypaisawsdl)
 
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
