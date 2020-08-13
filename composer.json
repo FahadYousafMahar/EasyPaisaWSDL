@@ -1,0 +1,27 @@
+{
+    "name": "FahadYousafMahar/EasyPaisaWSDL",
+    "type": "library",
+    "keywords": ["fahadyousafmahar","easypaisawsdl","easypaisa","easypaisa-php","easypay","telenor"],
+    "description": "PHP library to facilitate use of Easypaisa's Easypay WSDL\n",
+    "homepage": "https://webit.pk",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Fahad Yousaf Mahar",
+            "email": "fahadyousafmahar(at)gmail(dot)com",
+            "homepage": "https://github.com/fahadyousafmahar",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "ext-soap": "*",
+        "ext-mbstring": "*",
+        "wsdltophp/packagebase": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebIT\\": "./src/"
+        }
+    }
+}
