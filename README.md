@@ -1,10 +1,29 @@
 # EasyPaisaWSDL
 PHP library to facilitate use of Easypaisa's Easypay WSDL
 
+[![PHP Version](https://img.shields.io/packagist/php-v/fahadyousafmahar/easypaisa-wsdl-php)](https://packagist.org/packages/fahadyousafmahar/easypaisa-wsdl-php)
 ![GitHub top language](https://img.shields.io/github/languages/top/fahadyousafmahar/easypaisawsdl)
 ![Contributors](https://img.shields.io/github/contributors/fahadyousafmahar/easypaisawsdl)
 ![License](https://img.shields.io/github/license/fahadyousafmahar/easypaisawsdl)
 ![Repo Size](https://img.shields.io/github/repo-size/fahadyousafmahar/easypaisawsdl)
+
+## Installation
+
+### With Composer
+
+```
+$ composer require fahadyousafmahar/easypaisa-wsdl-php
+```
+
+```json
+{
+    "require": {
+        "fahadyousafmahar/easypaisa-wsdl-php": "^1.0.0"
+    }
+}
+```
+
+### Usage
 
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
