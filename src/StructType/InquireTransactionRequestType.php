@@ -34,12 +34,16 @@ class InquireTransactionRequestType extends BaseRequestType
      * @uses InquireTransactionRequestType::setAccountNum()
      * @param string $orderId
      * @param string $accountNum
+     * @param string $username
+     * @param string $password
      */
-    public function __construct($orderId = null, $accountNum = null)
+    public function __construct($orderId = null, $accountNum = null, $username = null, $password = null)
     {
         $this
             ->setOrderId($orderId)
-            ->setAccountNum($accountNum);
+            ->setAccountNum($accountNum)
+            ->setUsername($username)
+            ->setPassword($password);
     }
     /**
      * Get orderId value

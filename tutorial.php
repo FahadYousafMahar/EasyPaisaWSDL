@@ -1,17 +1,6 @@
 <?php
 /**
- * This file aims to show you how to use this generated package.
- * In addition, the goal is to show which methods are available and the fist needed parameter(s)
- * You have to use an associative array such as:
- * - the key must be a constant beginning with WSDL_ from AbstractSoapClientbase class each generated ServiceType class extends this class
- * - the value must be the corresponding key value (each option matches a {@link http://www.php.net/manual/en/soapclient.soapclient.php} option)
- * $options = array(
- * \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_URL => 'https://easypay.easypaisa.com.pk/easypay-service/PartnerBusinessService/META-INF/wsdl/partner/transaction/PartnerBusinessService.wsdl',
- * \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_TRACE => true,
- * \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_LOGIN => 'you_secret_login',
- * \WsdlToPhp\PackageBase\AbstractSoapClientBase::WSDL_PASSWORD => 'you_secret_password',
- * );
- * etc....
+ * This file aims to show you how to use this package.
  */
 require_once __DIR__ . '/vendor/autoload.php';
 /**
@@ -35,7 +24,9 @@ $parameters = new \WebIT\StructType\InitiateTransactionRequestType(
     'OTC', //string $transactionType ( Type of transaction. Possible values are: OTC / MA / CC )
     '03431234567', //string $msisdn (Customer’s MSISDN) {Mandatory for OTC, Mandatory for CC,  Optional for MA}
     '03431234567', //string $mobileAccountNo (Customer’s Mobile Account #) {Mandatory for MA, Optional for OTC}
-    'example@example.com' //string $emailAddress (Customer’s Email) Optional
+    'example@example.com', //string $emailAddress (Customer’s Email) Optional
+    'merchantUsername', //string $username (Merchant username) Mandatory
+    'merchantPassword' //string $password (Merchant password) Mandatory
 );
 if ($initiate->initiateTransaction($parameters) !== false) {
     print_r($initiate->getResult());
@@ -46,7 +37,23 @@ if ($initiate->initiateTransaction($parameters) !== false) {
  * Sample call for initiateCCTransaction operation/method
  * Send InitiateCCTransactionRequestType with your own parameters. Given below with empty constructor is for demo only
  */
-if ($initiate->initiateCCTransaction(new \WebIT\StructType\InitiateCCTransactionRequestType()) !== false) {
+$parameters = new \WebIT\StructType\InitiateCCTransactionRequestType(
+    '1234', // string $orderId (Merchant’s system generated Order Id)
+    '1234', // int $storeId (Store ID generated during merchant registration in Easypay)
+    '100.0', // float $transactionAmount (Total Transaction Amount)
+    'CC', // string $transactionType ( Type of transaction. Possible values are: CC )
+    '03431234567', // int $msisdn (Customer’s MSISDN) {Mandatory for OTC, Mandatory for CC,  Optional for MA}
+    'example@example.com', //string $emailAddress (Customer’s Email) Optional
+    'Mastercard', // string $cardType (Type of Credit Card in case of Credit Card Transaction)
+    '5313581000123430', // int $pan (Personal Account Number of the customer) Mandatory
+    '25', // int $expiryYear (Expiry Year) Mandatory
+    '12', // int $expiryMonth (Expiry Month) Mandatory
+    '123', // int $CVV (CVV) Mandatory
+    'merchantUsername', //string $username (Merchant username) Mandatory
+    'merchantPassword' //string $password (Merchant password) Mandatory
+
+);
+if ($initiate->initiateCCTransaction($parameters ) !== false) {
     print_r($initiate->getResult());
 } else {
     print_r($initiate->getLastError());
@@ -59,7 +66,14 @@ $inquire = new \WebIT\ServiceType\Inquire($options);
 /**
  * Sample call for inquireTransaction operation/method
  */
-if ($inquire->inquireTransaction(new \WebIT\StructType\InquireTransactionRequestType()) !== false) {
+$parameters = new \WebIT\StructType\InquireTransactionRequestType(
+    '1234', //string $orderId (Merchant’s system generated Order Id) Mandatory
+    '9999999999999999', // $accountNum (Merchant Account No registered with Easypay) Mandatory
+    'merchantUsername', //string $username (Merchant username) Mandatory
+    'merchantPassword'//string $password (Merchant password) Mandatory
+
+);
+if ($inquire->inquireTransaction($parameters) !== false) {
     print_r($inquire->getResult());
 } else {
     print_r($inquire->getLastError());

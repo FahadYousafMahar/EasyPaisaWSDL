@@ -92,6 +92,8 @@ class InitiateCCTransactionRequestType extends BaseRequestType
      * @uses InitiateCCTransactionRequestType::setExpiryYear()
      * @uses InitiateCCTransactionRequestType::setExpiryMonth()
      * @uses InitiateCCTransactionRequestType::setCvv2()
+     * @uses InitiateCCTransactionRequestType::setUsername()
+     * @uses InitiateCCTransactionRequestType::setPassword()
      * @param string $orderId
      * @param int $storeId
      * @param float $transactionAmount
@@ -103,8 +105,10 @@ class InitiateCCTransactionRequestType extends BaseRequestType
      * @param string $expiryYear
      * @param string $expiryMonth
      * @param string $cvv2
+     * @param string $username
+     * @param string $password
      */
-    public function __construct($orderId = null, $storeId = null, $transactionAmount = null, $transactionType = null, $msisdn = null, $emailAddress = null, $cardType = null, $pan = null, $expiryYear = null, $expiryMonth = null, $cvv2 = null)
+    public function __construct($orderId = null, $storeId = null, $transactionAmount = null, $transactionType = null, $msisdn = null, $emailAddress = null, $cardType = null, $pan = null, $expiryYear = null, $expiryMonth = null, $cvv2 = null, $username = null, $password = null)
     {
         $this
             ->setOrderId($orderId)
@@ -117,7 +121,9 @@ class InitiateCCTransactionRequestType extends BaseRequestType
             ->setPan($pan)
             ->setExpiryYear($expiryYear)
             ->setExpiryMonth($expiryMonth)
-            ->setCvv2($cvv2);
+            ->setCvv2($cvv2)
+            ->setUsername($username)
+            ->setPassword($password);
     }
     /**
      * Get orderId value

@@ -75,8 +75,10 @@ class InitiateTransactionRequestType extends BaseRequestType
      * @param string $msisdn
      * @param string $mobileAccountNo
      * @param string $emailAddress
+     * @param string $username
+     * @param string $password
      */
-    public function __construct($orderId = null, $storeId = null, $transactionAmount = null, $transactionType = null, $msisdn = null, $mobileAccountNo = null, $emailAddress = null)
+    public function __construct($orderId = null, $storeId = null, $transactionAmount = null, $transactionType = null, $msisdn = null, $mobileAccountNo = null, $emailAddress = null, $username = null, $password = null)
     {
         $this
             ->setOrderId($orderId)
@@ -85,7 +87,9 @@ class InitiateTransactionRequestType extends BaseRequestType
             ->setTransactionType($transactionType)
             ->setMsisdn($msisdn)
             ->setMobileAccountNo($mobileAccountNo)
-            ->setEmailAddress($emailAddress);
+            ->setEmailAddress($emailAddress)
+            ->setUsername($username)
+            ->setPassword($password);
     }
     /**
      * Get orderId value
